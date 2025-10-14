@@ -1,0 +1,60 @@
+<!-- Navbar principal -->
+<nav class="fixed top-0 left-0 w-full bg-white border-b border-gray-100 shadow-sm z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 md:px-0">
+    <!-- Logo -->
+    <div class="hover:cursor-pointer text-2xl md:text-3xl font-bold tracking-widest">
+      <img (click)="navegar('inicio')" src="img/DEVIONCORP.png" alt="">
+    </div>
+
+    <!-- Botón hamburguesa (solo en móvil) -->
+    <button class="md:hidden text-gray-700 text-2xl focus:outline-none" (click)="menuOpen = !menuOpen">
+      <i class="fa" [ngClass]="menuOpen ? 'fa-times' : 'fa-bars'"></i>
+    </button>
+
+    <!-- Menú Desktop -->
+    <ul class="hidden md:flex gap-6 font-semibold items-center">
+      <li (click)="navegar('inicio')"><span
+          class="hover:cursor-pointer text-xs md:text-[12px] text-gray-800 hover:text-sky-500">INICIO</span></li>
+      <li (click)="navegar('nosotros')"><span
+          class="hover:cursor-pointer text-xs md:text-[12px] text-gray-800 hover:text-sky-500">NOSOTROS</span></li>
+      <li (click)="navegar('desweb')"><span
+          class="hover:cursor-pointer text-xs md:text-[12px] text-gray-800 hover:text-sky-500">DESARROLLO WEB</span>
+      </li>
+      <li (click)="navegar('desmobile')"><span
+          class="hover:cursor-pointer text-xs md:text-[12px] text-gray-800 hover:text-sky-500">DESARROLLO MOBILE</span>
+      </li>
+      <li (click)="navegar('contacto')"><span
+          class="hover:cursor-pointer text-xs md:text-[12px] text-gray-800 hover:text-sky-500">CONTACTO</span></li>
+
+      <!-- Iconos sociales -->
+      <div class="flex items-center gap-3">
+        <a href="https://www.facebook.com/profile.php?id=100083151018291" target="_blank"
+          class="border border-gray-200 rounded-full w-8 h-8 flex items-center justify-center text-gray-700 hover:text-sky-500"><i
+            class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/darwin-flores-50a704316/" target="_blank"
+          class="border border-gray-200 rounded-full w-8 h-8 flex items-center justify-center text-gray-700 hover:text-sky-500"><i
+            class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/shox7_f/" target="_blank"
+          class="border border-gray-200 rounded-full w-8 h-8 flex items-center justify-center text-gray-700 hover:text-sky-500"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/darwin-flores-50a704316/" target="_blank"
+          class="border border-gray-200 rounded-full w-8 h-8 flex items-center justify-center text-gray-700 hover:text-sky-500"><i
+            class="fab fa-linkedin-in"></i></a>
+        <span class="mx-2 text-gray-200 text-2xl">|</span>
+        <a href="#" class="text-gray-700 text-xl hover:text-sky-500"><i class="fa fa-search"></i></a>
+      </div>
+    </ul>
+  </div>
+
+  <!-- Menú móvil -->
+  <div
+    class="md:hidden flex flex-col gap-4 px-6 py-4 border-t border-gray-100 bg-white font-semibold transition-all duration-300"
+    *ngIf="menuOpen">
+    <span (click)="navegar('inicio')" class="text-gray-800 hover:text-sky-500">INICIO</span>
+    <span (click)="navegar('nosotros')" class="text-gray-800 hover:text-sky-500">NOSOTROS</span>
+    <span (click)="navegar('desweb')" class="text-gray-800 hover:text-sky-500">DESARROLLO WEB</span>
+    <span (click)="navegar('desmobile')" class="text-gray-800 hover:text-sky-500">DESARROLLO MOBILE</span>
+    <span (click)="navegar('contacto')" class="text-gray-800 hover:text-sky-500">CONTACTO</span>
+
+  </div>
+</nav>
