@@ -17,12 +17,14 @@
           class="hover:cursor-pointer text-xs md:text-[12px] text-gray-800 hover:text-sky-500">INICIO</span></li>
       <li (click)="navegar('nosotros')"><span
           class="hover:cursor-pointer text-xs md:text-[12px] text-gray-800 hover:text-sky-500">NOSOTROS</span></li>
-      <li (click)="navegar('desweb')"><span
-          class="hover:cursor-pointer text-xs md:text-[12px] text-gray-800 hover:text-sky-500">DESARROLLO WEB</span>
-      </li>
-      <li (click)="navegar('desmobile')"><span
-          class="hover:cursor-pointer text-xs md:text-[12px] text-gray-800 hover:text-sky-500">DESARROLLO MOBILE</span>
-      </li>
+
+      <select class="bg-white hover:cursor-pointer text-xs md:text-[12px] text-gray-800 hover:text-sky-500" alt=""
+        name="servicios" id="">
+        <option (click)="navegar('inicio')" value="Primero">SERVICIOS APAC</option>
+        <option (click)="navegar('desweb')" value="Primero">SISTEMAS WEB</option>
+        <option (click)="navegar('desmobile')" value="Primero">SISTEMAS MOBILE</option>
+      </select>
+
       <li (click)="navegar('contacto')"><span
           class="hover:cursor-pointer text-xs md:text-[12px] text-gray-800 hover:text-sky-500">CONTACTO</span></li>
 
@@ -52,8 +54,12 @@
     *ngIf="menuOpen">
     <span (click)="navegar('inicio')" class="text-gray-800 hover:text-sky-500">INICIO</span>
     <span (click)="navegar('nosotros')" class="text-gray-800 hover:text-sky-500">NOSOTROS</span>
-    <span (click)="navegar('desweb')" class="text-gray-800 hover:text-sky-500">DESARROLLO WEB</span>
-    <span (click)="navegar('desmobile')" class="text-gray-800 hover:text-sky-500">DESARROLLO MOBILE</span>
+    <select class="bg-white" alt=""
+      name="servicios" id="">
+      <option (click)="navegar('inicio')" value="Primero">SERVICIOS APAC</option>
+      <option (click)="navegar('desweb')" value="Primero">SISTEMAS WEB</option>
+      <option (click)="navegar('desmobile')" value="Primero">SISTEMAS MOBILE</option>
+    </select>
     <span (click)="navegar('contacto')" class="text-gray-800 hover:text-sky-500">CONTACTO</span>
 
   </div>
